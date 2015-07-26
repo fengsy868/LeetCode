@@ -18,6 +18,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     struct ListNode* lresult = (struct ListNode *)malloc(sizeof(struct ListNode));
     struct ListNode* head = lresult;
     int carry = 0;
+    int lval1, lval2;
 
     if(l1 == NULL | l2 == NULL)
     {
@@ -27,17 +28,28 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
 
     lresult->val = (l1->val + l2->val + carry)%10;
     carry = (l1->val + l2->val) >= 10 ? 1: 0; 
-    while(l1->next != NULL & l2->next != NULL)
+    while(l1->next != NULL | l2->next != NULL)
     {
         struct ListNode* tmp = (struct ListNode *)malloc(sizeof(struct ListNode));
         
-        carry = (l1->val + l2->val + carry) >= 10 ? 1 : 0;
-
-        l1 = l1->next;
-        l2 = l2->next;
-
-        tmp->val = (l1->val + l2->val + carry)%10;
+        if(l1->next != NULL) 
+        {
+            l1 = l1->next;
+            lval1 = l1->val;
+        }else 
+        {lval1 = 0;}
+        
+        if(l2->next != NULL) 
+        {
+            l2 = l2->next;
+            lval2 = l2->val;
+        }else 
+        {lval2 = 0;}
+        
+        tmp->val = (lval1 + lval2 + carry)%10;
+        carry = (lval1 + lval2 + carry) >= 10 ? 1 : 0;
         tmp->next = NULL;
+        
         lresult->next= tmp;
         lresult = lresult->next;
     }
@@ -50,40 +62,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
         lresult->next= tmp;
         lresult = lresult->next;
     }
-    else if(l1->next == NULL)
-    {
-        while (l2->next != NULL | carry != 1)
-        {
-            struct ListNode* tmp = (struct ListNode *)malloc(sizeof(struct ListNode));
-        
-            carry = (l2->val + carry) >= 10 ? 1 : 0;
-
-            l2 = l2->next;
-
-            tmp->val = (l2->val + carry)%10;
-            tmp->next = NULL;
-            lresult->next= tmp;
-            lresult = lresult->next;
-        }
-        return head;
-    }else
-    {
-        while (l1->next != NULL)
-        {
-            struct ListNode* tmp = (struct ListNode *)malloc(sizeof(struct ListNode));
-        
-            if((l1->val + carry) >= 10) {carry = 1;}
-            else {carry=0;}
-
-            l1 = l1->next;
-
-            tmp->val = (l1->val + carry)%10;
-            tmp->next = NULL;
-            lresult->next= tmp;
-            lresult = lresult->next;
-        }       
-        return head;
-    }
+    return head;
 }
 
 int main() {
