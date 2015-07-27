@@ -14,3 +14,4 @@ This is my implementation for leetcode using C. (progress 8/241)
 |6  | [ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | C | Easy | 8ms |
 |6  | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | C | Easy | 4ms |
 |7  | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | C | Easy | 4ms |
+|7  | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | C | Easy | 60ms |
