@@ -12,3 +12,4 @@ This is my implementation for leetcode using C. (progress 6/241)
 |4  | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | C | Hard | 28ms |
 |5  | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | C | Medium | 0ms |
 |6  | [ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | C | Easy | 8ms |
+|6  | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | C | Easy | 4ms |
