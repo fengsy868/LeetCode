@@ -1,6 +1,6 @@
 LeetCode
 ========
-This is my implementation for leetcode using C. (progress 4/240)
+This is my implementation for leetcode using C. (progress 6/241)
 
 ## Algorithm
 
@@ -11,3 +11,4 @@ This is my implementation for leetcode using C. (progress 4/240)
 |3  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | C | Medium | 24ms |
 |4  | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | C | Hard | 28ms |
 |5  | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | C | Medium | 0ms |
+|6  | [ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | C | Easy | 8ms |
