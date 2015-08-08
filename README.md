@@ -1,6 +1,6 @@
 LeetCode
 ========
-This is my implementation for leetcode using C. (progress 10/241)
+This is my implementation for leetcode using C and also Java. (progress 10/241)
 
 ## Algorithm
 
